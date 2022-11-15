@@ -1,0 +1,17 @@
+{
+  "posts": [
+    {
+      "id": 11,
+      "firstName": "akhil",
+      "address": "padi[arambil",
+      "Dob": "15-6-1999",
+      "mobile": "989560598",
+      "role": "developer",
+      "gender": "male"
+    }
+  ],
+  "comments": [],
+  "profile": {
+    "name": "typicode"
+  }
+}
