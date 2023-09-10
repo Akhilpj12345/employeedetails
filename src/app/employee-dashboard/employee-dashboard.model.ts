@@ -5,5 +5,5 @@ export class EmployeeModel{
     Dob : number = 0;
     mobile : string= '';
     role: string= '';
-    gender:string='';
+    gender:string='Male,Female,Others';
 }

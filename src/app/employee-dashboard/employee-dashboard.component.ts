@@ -1,5 +1,5 @@
 import { Component, ErrorHandler, OnInit } from '@angular/core';
-import {FormBuilder,FormGroup} from '@angular/forms'
+import {FormBuilder,FormGroup,Validators} from '@angular/forms'
 import { subscribeOn } from 'rxjs';
 import { ApiService } from '../shared/api.service';
 import { EmployeeModel } from './employee-dashboard.model';
@@ -10,6 +10,10 @@ import { EmployeeModel } from './employee-dashboard.model';
   styleUrls: ['./employee-dashboard.component.css']
 })
 export class EmployeeDashboardComponent implements OnInit {
+
+
+
+  
    
   formValue ! : FormGroup;
   employeeModelObj : EmployeeModel = new EmployeeModel();
@@ -18,11 +22,11 @@ export class EmployeeDashboardComponent implements OnInit {
 
   ngOnInit(): void {
     this.formValue = this.formbuilder.group({
-      firstName : [''],
-      address : [''],
-      Dob : [''],
-      mobile : [''],
-      role : [''],
+      firstName : ['',Validators.required],
+      address : ['',Validators.required],
+      Dob : ['',Validators.required],
+      mobile : ['',Validators.required],
+      role : ['',Validators.required],
       gender:[''],
 
     })
